@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Веб-визитка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 3vw;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      box-sizing: border-box;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .profile-pic {
+      width: 100%;
+      max-width: calc(100% - 2vw);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      margin-bottom: 2vw;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      font-size: calc(1.5rem + 1.5vw);
+      margin-bottom: 1vw;
+    }
+    h2 {
+      font-size: calc(1rem + 1vw);
+      color: #666;
+      margin-bottom: 2vw;
+    }
+    p {
+      font-size: calc(0.9rem + 0.5vw);
+      margin: 1.5vw 0;
+    }
+    .contact {
+      margin-top: 2vw;
+    }
+    .contact p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(0.8rem + 0.5vw);
+    }
+    .contact i {
+      margin-right: 1vw;
+      color: #333;
+      transition: all 0.3s;
+      font-size: calc(1rem + 0.5vw);
+    }
+    .contact p:hover i {
+      color: #007bff;
+      transform: scale(1.2);
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #007bff;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .card {
+        width: 95%;
+        padding: 4vw;
+      }
+      .profile-pic {
+        max-width: calc(100% - 4vw);
+      }
+      h1 {
+        font-size: calc(1.2rem + 1.5vw);
+      }
+      h2 {
+        font-size: calc(0.8rem + 1vw);
+      }
+      p {
+        font-size: calc(0.7rem + 0.5vw);
+      }
+      .contact p {
+        font-size: calc(0.6rem + 0.5vw);
+      }
+      .contact i {
+        font-size: calc(0.8rem + 0.5vw);
+      }
+    }
+    @media (min-width: 1200px) {
+      .card {
+        max-width: 900px;
+      }
+      .profile-pic {
+        max-width: calc(100% - 2vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="image.png" alt="Profile Picture" class="profile-pic">
+    <h1>Константинова Светлана</h1>
+    <h2>Project manager / Менеджер образовательных проектов</h2>
+    <p>Яндекс | EJM & Business Process Training</p>
+    <div class="contact">
+      <p><i class="fas fa-phone"></i> <a href="tel:+79262823570">+7 (926) 282-35-70</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:svetik@yandex-team.ru">svetik@yandex-team.ru</a></p>
+      <p><i class="fab fa-telegram"></i> <a href="https://t.me/svet_ko">@svet_ko</a></p>
+    </div>
+  </div>
+</body>
+</html>
